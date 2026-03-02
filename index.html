@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lista de Tarefas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Tarefas</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Escreva uma tarefa..." autocomplete="off">
+      <button type="submit">Adicionar</button>
+    </form>
+    <div class="meta">
+      <div class="actions">
+        <button type="button" id="clear-button">Limpar tudo</button>
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="active">Ativas</button>
+        <button class="filter-btn" data-filter="completed">Concluídas</button>
+      </div>
+      <div class="counter">
+        <span id="todo-count">0 pendentes</span>
+      </div>
+    </div>
+    <ul id="todo-list"></ul>
+
+    <div id="undo-snackbar" class="snackbar" aria-live="polite">
+      <span id="undo-message">Tarefa removida</span>
+      <button id="undo-button">Desfazer</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
